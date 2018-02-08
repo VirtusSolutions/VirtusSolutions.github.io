@@ -1,0 +1,67 @@
+body
+
+  .grid-container
+    width: 100%
+    position: relative
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    flex-direction: column
+    // background-color: red
+
+    .grid-row
+      margin: 0 auto 120px auto
+      position: relative
+      display: flex
+
+      .grid-half
+        flex: 1
+        // background-color: blue
+
+      @media (max-width: $mobile-cutoff)
+        margin: 0 auto 120px auto
+        display: block
+
+        .grid-half
+          width: 100%
+          height: 90vw
+          margin-top: 5px
+
+      .grid-row-number
+        font-size: 16px
+        text-decoration: underline
+        margin: 5px
+
+      .grid-row-title
+        font-size: 50px
+        line-height: 0.5
+        margin: 10px
+
+        @media (max-width: $small-cutoff)
+          line-height: 1
+
+      .grid-row-paragraph
+        font-size: 20px
+        margin-left: 100px
+
+        @media (max-width: $mobile-cutoff)
+          margin: 10px
+
+    .grid-row-contained
+      width: 50%
+      // background: pink
+      flex-direction: column
+      margin-bottom: 20px
+
+      @media (max-width: $large-cutoff)
+        width: 700px
+      @media (max-width: $medium-cutoff)
+        width: 500px
+      @media (max-width: $small-cutoff)
+        width: 80%
+      @media (max-width: $mobile-cutoff)
+        width: 100%
+
+    .grid-row-wide
+      width: 90%

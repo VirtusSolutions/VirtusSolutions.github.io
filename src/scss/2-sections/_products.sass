@@ -1,0 +1,64 @@
+#products
+  margin-top: 70px
+
+  .info
+
+    @media (max-width: $mobile-cutoff)
+      margin-top: 100px
+
+  .show
+    height: 45vw
+    // Put image Here
+    // Blur the Background
+
+    .projectSection
+
+      background-image: url('../../dist/images/vishalshah.png')
+      background-position: center
+      background-size: cover
+      background-size: 100%
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 2em
+
+      .projectInfo
+        background-color: rgba(6, 214, 160, 0.3)
+        height: 100%
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        opacity: 0
+
+        .projectTitle
+          overflow: hidden
+
+          h3
+            transform: translateY(100%)
+
+        .projectDescription
+          overflow: hidden
+
+          p
+            transform: translateY(100%)
+
+
+      &:hover
+        background-size: 150%
+        transform: scale(0.98)
+
+        .projectInfo
+          opacity: 1
+
+          .projectTitle
+
+            h3
+              transform: translateY(0)
+
+          .projectDescription
+
+            p
+              transform: translateY(0)

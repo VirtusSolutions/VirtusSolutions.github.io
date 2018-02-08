@@ -1,0 +1,1 @@
+$(document).ready(function(){$menuBtn=$(".menuBtn");if(window.innerWidth>800){}else{}$menuBtn.on("click",function(){alert("hi")})});

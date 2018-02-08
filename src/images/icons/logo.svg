@@ -1,0 +1,22 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <defs>
+  <filter id="svg_1_blur">
+   <feGaussianBlur stdDeviation="0.4" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="402" width="402" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect filter="url(#svg_1_blur)" opacity="0.9" stroke="#000" id="svg_1" height="388.000002" width="388.000002" y="8" x="6" stroke-width="1.5" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="200" x2="379.666167" y1="200" x1="20" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="none"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="90" id="svg_4" y="133" x="85.774277" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Virtus</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Oswald, sans-serif" font-size="90" id="svg_6" y="326" x="14.891464" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">Solutions</text>
+ </g>
+</svg>
