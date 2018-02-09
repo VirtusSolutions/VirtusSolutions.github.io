@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $menuBtn = $('.menuBtn');
+  $nav = $('nav');
 
   if (window.innerWidth > 800) {
     // startup($loader, $loaderTransition, $loadingText, $gridLeftItem);
@@ -8,6 +9,10 @@ $(document).ready(function(){
   }
 
   $menuBtn.on('click', function() {
-    alert('hi')
+    openNav($nav)
   });
 });
+
+function openNav($nav) {
+  $nav.toggleClass('selected')
+}
