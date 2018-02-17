@@ -1,6 +1,34 @@
 #start.grid-container
   .grid-row.grid-row-wide.startContainer
-    .grid-half
-      p Lets Start Animation
-    .grid-half
-      p Words and button
+    
+    .grid-half.imgSection
+      .image
+        img(src='dist/images/JoinMe.svg').masking
+        .filler
+        .filler
+        .filler
+        .filler
+        
+    .grid-half.text
+      h3 Contact me to get a quote!
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper hendrerit sollicitudin. Sed consequat dui neque, et malesuada purus dictum ut. Sed mattis maximus nisl eget aliquam. Curabitur in velit vitae erat efficitur euismod quis eget leo. Phasellus libero orci, gravida in tincidunt vel, placerat et ligula. Nulla facilisi. Nulla risus lacus, venenatis pretium leo vitae, luctus sagittis nisi. Donec finibus, quam ut finibus semper, quam lacus porta libero, ut varius diam mi ut tortor. 
+      
+      form(method='POST' action='formspreeURL')
+        label(for='Name') Name
+        input(type='text' name='Name' placeholder='Name')
+          
+        label(for='CompanyOrOrganization') Company/Organization
+        input(type='text' name='CompanyOrOrganization' placeholder='Company/Organization')
+          
+        label(for='Type') Type of Job
+        select(name='Type')
+          option(value='Website') Website
+          option(value='WebApp') Web App
+          option(value='WebApp') Mobile App
+          
+        label(for='Message') Description or Message
+        textarea(type='text' name='Message' placeholder='Message')
+          
+        input(type='submit' name='submit' value='Send Message')
+        
+        

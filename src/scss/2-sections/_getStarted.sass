@@ -1,3 +1,138 @@
 #start
   .startContainer
-    
+    .imgSection
+      margin: 0
+      padding: 0
+      display: flex
+      align-items: center
+      justify-content: center
+
+      // TODO: Make responsive and remove borders
+      .image
+        margin: 0
+        padding: 0
+        width: 75%
+        height: auto
+        // width: 350px
+        // height: 350px
+        position: relative
+        // background-color: blue
+        overflow: hidden
+
+        .masking
+          width: 100%
+          height: auto
+          z-index: -5
+          // opacity: 0.5
+          border: 100% solid $ghost-white
+
+        .filler
+          position: absolute
+          border-radius: 50%
+          transition: all 1s ease
+
+          &:nth-last-of-type(1)
+            z-index: -10
+            background: $infra-red
+            height: 30px
+            width: 30px
+            top: -100px
+            left: -100px
+
+          &:nth-last-of-type(2)
+            z-index: -7
+            background: $orange-yellow
+            height: 0
+            width: 0
+            top: 400px
+            left: 600px
+
+          &:nth-last-of-type(3)
+            z-index: -9
+            background: $caribbean-green
+            height: 0
+            width: 0
+            top: -100px
+            left: 200px
+
+
+          &:nth-last-of-type(4)
+            z-index: -8
+            background: $cyan-cornflower-blue
+            height: 0
+            width: 0
+            top: 350px
+            left: 100px
+
+          &.started:nth-last-of-type(1)
+            height: 800px
+            width: 800px
+            // @media (max-width: $title-collapse)
+
+          &.started:nth-last-of-type(2)
+            height: 700px
+            width: 700px
+            top: 60px
+            left: 100px
+            @media (max-width: $title-collapse)
+              top: 15%
+              left: 12.5%
+
+          &.started:nth-last-of-type(3)
+            height: 400px
+            width: 400px
+            top: -100px
+            left: 150px
+            @media (max-width: $title-collapse)
+              top: -25%
+              left: 25%
+
+          &.started:nth-last-of-type(4)
+            height: 400px
+            width: 400px
+            top: 200px
+            left: -100px
+            @media (max-width: $title-collapse)
+              top: 50%
+              left: 0%
+
+
+    .text
+      margin: 0
+      padding: 10px
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+
+      form
+        width: 40vw
+        height: auto
+        display: flex
+        background: #202020
+        flex-direction: column
+
+
+
+input
+  width: 350px
+  padding: 20px 0px
+  background: transparent
+  border: 0
+  border-bottom: 1px solid #435160
+  outline: none
+  color: #6D7781
+  font-size: 16px
+
+label
+  display: block
+  position: absolute
+  margin-right: 10px
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  background: transparent
+  content: ""
+  transition: all .3s ease-in-out
+  cursor: pointer
+  border: 3px solid #435160
