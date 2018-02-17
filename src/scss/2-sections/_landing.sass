@@ -10,15 +10,136 @@
     width: 80%
     text-align: left
 
-    .svgAnimation
-      font-size: 75px
-      font-family: $font-header
+    @media (max-width: $small-cutoff)
+      width: 100%
+
+      .subtitle
+        margin-left: 10px
+
+    .title
+      width: auto
+      height: 400px
+      overflow: hidden
+      position: relative
+
+      @media (max-width: $title-collapse)
+        width: 100%
+        // height: 520vw
+        height: 300px
+      @media (max-width: 490px)
+        height: 250px
+      @media (max-width: 390px)
+        height: 200px
+      @media (max-width: 310px)
+        display: none
+      //   height: 150px
+      // @media (max-width: 230px)
+      //   height: 100px
+
+      .mask
+        width: auto
+        // opacity: 0.5
+        height: 400px
+        // margin-left: -10px
+        display: block
+        position: absolute
+        transform: translate(0, -50%)
+        top: 50%
+        left: 0
+        z-index: -5
+        // background-color: red
+        border: 100% solid $ghost-white
+        border-left: 50px solid $ghost-white
+        transition: height 1s ease
+
+        @media (max-width: $title-collapse)
+          border-left: 0px solid $ghost-white
+          width: 130%
+          height: auto
+
+        // TODO: Fix slight border in animation
+
+        // &.started
+        //   height: 400px
+        //   margin-left: 0px
+
+      .fill
+        position: absolute
+        border-radius: 50%
+        transition: all 1s ease
+
+        &:nth-last-of-type(1)
+          z-index: -10
+          background: $infra-red
+          height: 30px
+          width: 30px
+          top: -100px
+          left: -100px
+
+        &:nth-last-of-type(2)
+          z-index: -9
+          background: $orange-yellow
+          height: 0
+          width: 0
+          top: 400px
+          left: 600px
+
+        &:nth-last-of-type(3)
+          z-index: -8
+          background: $caribbean-green
+          height: 0
+          width: 0
+          top: -100px
+          left: 400px
+
+
+        &:nth-last-of-type(4)
+          z-index: -7
+          background: $cyan-cornflower-blue
+          height: 0
+          width: 0
+          top: 350px
+          left: 100px
+
+        &.started:nth-last-of-type(1)
+          height: 800px
+          width: 800px
+          @media (max-width: $title-collapse)
+
+        &.started:nth-last-of-type(2)
+          height: 650px
+          width: 650px
+          top: 60px
+          left: 100px
+          @media (max-width: $title-collapse)
+            top: 15%
+            left: 12.5%
+
+        &.started:nth-last-of-type(3)
+          height: 420px
+          width: 420px
+          top: -100px
+          left: 200px
+          @media (max-width: $title-collapse)
+            top: -25%
+            left: 25%
+
+        &.started:nth-last-of-type(4)
+          height: 400px
+          width: 400px
+          top: 200px
+          left: 0px
+          @media (max-width: $title-collapse)
+            top: 50%
+            left: 0%
 
     .subtitle
+      z-index: 7
       position: relative
-      // To get on top of title
-      top: -20px
-      left: 30px
+      top: 0
+      left: 0
+      font-size: 1.7em
+
 
   .scroll
     position: absolute
