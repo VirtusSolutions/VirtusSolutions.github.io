@@ -30,6 +30,13 @@ nav
       a:hover
         margin-left: -10px
 
+      @media (max-width: $mobile-cutoff)
+        a:active
+          margin-left: -10px
+
+        a:hover
+          margin-left: 0px
+
   &.selected
     transform: scale(1)
     top: 0

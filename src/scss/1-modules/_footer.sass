@@ -1,0 +1,29 @@
+footer
+  margin: 0
+  padding: 3vw
+  width: 94%
+  display: flex
+  align-items: center
+
+
+  .footerRow
+    display: flex
+    width: 100%
+    @media (max-width: $mobile-cutoff)
+      flex-direction: column-reverse
+
+    .statement
+      flex: 1
+      @media (max-width: $mobile-cutoff)
+        text-align: center
+
+      p
+        a
+          color: #0074D9
+
+
+    .links
+      flex: 1
+      text-align: right
+      @media (max-width: $mobile-cutoff)
+        text-align: center

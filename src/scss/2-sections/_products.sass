@@ -48,7 +48,6 @@
           p
             transform: translateY(100%)
 
-
       &:hover
         background-size: 150%
         transform: scale(0.98)
@@ -65,3 +64,36 @@
 
             p
               transform: translateY(0)
+
+
+      @media (max-width: $mobile-cutoff)
+
+        .projectInfo
+          opacity: 1
+          background: none
+          align-items: flex-end
+          justify-content: flex-end
+          padding: 5px
+          color: $ghost-white
+
+          .projectTitle
+
+            h3
+              color: $ghost-white
+              font-size: 0.5em
+              transform: translateY(0)
+
+          .projectDescription
+
+            p
+              color: $ghost-white
+              font-size: 0.5em
+              transform: translateY(0)
+
+        &:hover
+          background-size: 100%
+          transform: scale(1)
+
+        &:active
+          background-size: 150%
+          transform: scale(0.98)

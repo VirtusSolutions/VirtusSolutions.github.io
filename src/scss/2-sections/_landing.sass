@@ -39,7 +39,7 @@
       .mask
         width: auto
         // opacity: 0.5
-        height: 400px
+        height: 450px
         // margin-left: -10px
         display: block
         position: absolute
@@ -50,7 +50,7 @@
         // background-color: red
         border: 100% solid $ghost-white
         border-left: 50px solid $ghost-white
-        transition: height 1s ease
+        transition: $titles-bezier
 
         @media (max-width: $title-collapse)
           border-left: 0px solid $ghost-white
@@ -59,14 +59,14 @@
 
         // TODO: Fix slight border in animation
 
-        // &.started
-        //   height: 400px
-        //   margin-left: 0px
+        &.started
+          height: 400px
+          margin-left: 0px
 
       .fill
         position: absolute
         border-radius: 50%
-        transition: all 1s ease
+        transition: $titles-bezier
 
         &:nth-last-of-type(1)
           z-index: -10

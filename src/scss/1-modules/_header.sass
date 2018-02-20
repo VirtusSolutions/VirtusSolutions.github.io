@@ -47,5 +47,10 @@ header
       cursor: pointer
 
       &:hover
-        // background: $infra-red
         transform: scale(0.9)
+
+        @media (max-width: $mobile-cutoff)
+          &:hover
+            transform: scale(1)
+          &:active
+            transform: scale(0.9)

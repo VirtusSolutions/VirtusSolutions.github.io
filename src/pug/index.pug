@@ -11,13 +11,19 @@ html
     
     include partials/_menu.pug
     
+    a(name='home')
     include sections/landing.pug
     
-    include sections/products.pug
-    
+    a(name='about')
     include sections/about.pug
     
+    a(name='products')
+    include sections/products.pug
+    
+    a(name='quote')
     include sections/getStarted.pug
+    
+    include partials/_footer.pug
     
     include partials/_lowerHead.pug
 

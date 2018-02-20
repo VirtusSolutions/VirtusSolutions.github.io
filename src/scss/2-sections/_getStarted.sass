@@ -11,25 +11,39 @@
       .image
         margin: 0
         padding: 0
-        width: 75%
-        height: auto
+        width: 90%
+        height: 38vw
         // width: 350px
         // height: 350px
         position: relative
         // background-color: blue
         overflow: hidden
+        @media (max-width: $title-collapse)
+          height: 80vw
+        // @media (max-width: $mobile-cutoff)
+        //   margin-bottom: 100px
 
         .masking
-          width: 100%
+          width: 130%
           height: auto
           z-index: -5
+          margin-left: -15%
+          margin-top: -15%
           // opacity: 0.5
           border: 100% solid $ghost-white
+          transition: $titles-bezier
+
+          &.started
+            width: 100%
+            margin-left: 0
+            margin-top: 0
 
         .filler
           position: absolute
+          top: 0
+          left: 0
           border-radius: 50%
-          transition: all 1s ease
+          transition: $titles-bezier
 
           &:nth-last-of-type(1)
             z-index: -10
@@ -61,41 +75,52 @@
             background: $cyan-cornflower-blue
             height: 0
             width: 0
-            top: 350px
-            left: 100px
+            top: 150px
+            left: -400px
 
           &.started:nth-last-of-type(1)
             height: 800px
             width: 800px
+            top: -50%
+            left: -50%
             // @media (max-width: $title-collapse)
 
           &.started:nth-last-of-type(2)
             height: 700px
             width: 700px
-            top: 60px
-            left: 100px
-            @media (max-width: $title-collapse)
+            top: 10%
+            left: 35%
+            @media (max-width: $medium-cutoff)
               top: 15%
               left: 12.5%
 
           &.started:nth-last-of-type(3)
             height: 400px
             width: 400px
-            top: -100px
-            left: 150px
-            @media (max-width: $title-collapse)
+            // top: -100%
+            // left: 150%
+            @media (max-width: 10000000px)
               top: -25%
               left: 25%
 
           &.started:nth-last-of-type(4)
             height: 400px
             width: 400px
-            top: 200px
-            left: -100px
-            @media (max-width: $title-collapse)
+            top: 50%
+            left: -10%
+            @media (max-width: $medium-cutoff)
               top: 50%
-              left: 0%
+              left: -50%
 
+
+    @media (max-width: $title-collapse)
+      margin: 0 auto 120px auto
+      display: block
+
+      .grid-half
+        width: 100%
+        height: 90vw
+        margin-top: 5px
 
     .text
       margin: 0
@@ -104,35 +129,40 @@
       align-items: center
       justify-content: center
       flex-direction: column
+      @media (max-width: $mobile-cutoff)
+        margin-top: 100px
 
       form
+        margin-top: 20px
         width: 40vw
         height: auto
         display: flex
-        background: #202020
+        // background: #202020
         flex-direction: column
+        @media (max-width: $title-collapse)
+          width: 80%
 
 
-
-input
-  width: 350px
-  padding: 20px 0px
-  background: transparent
-  border: 0
-  border-bottom: 1px solid #435160
-  outline: none
-  color: #6D7781
-  font-size: 16px
-
-label
-  display: block
-  position: absolute
-  margin-right: 10px
-  width: 8px
-  height: 8px
-  border-radius: 50%
-  background: transparent
-  content: ""
-  transition: all .3s ease-in-out
-  cursor: pointer
-  border: 3px solid #435160
+//
+// input
+//   width: 350px
+//   padding: 20px 0px
+//   background: transparent
+//   border: 0
+//   border-bottom: 1px solid #435160
+//   outline: none
+//   color: #6D7781
+//   font-size: 16px
+//
+// label
+//   display: block
+//   position: absolute
+//   margin-right: 10px
+//   width: 8px
+//   height: 8px
+//   border-radius: 50%
+//   background: transparent
+//   content: ""
+//   transition: all .3s ease-in-out
+//   cursor: pointer
+//   border: 3px solid #435160
