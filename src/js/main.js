@@ -9,6 +9,7 @@ $(document).ready(function(){
   $masking = $('.masking');
   $link = $('.link a');
   $start = $('#start');
+  $loader = $('#loader');
 
 
   if (window.innerWidth > 800) {
@@ -17,7 +18,7 @@ $(document).ready(function(){
     // mobileStartup($gridLeftItem)
   }
 
-  startup($fill, $mask)
+  startup($fill, $mask, $loader)
 
   // TODO: Start this at scroll down
   // seeGetStarted($filler, $masking)
@@ -61,11 +62,17 @@ function nthOfType(type, num) {
   return typeArray
 }
 
-function startup($fill, $mask) {
-  for(var i = 0; i < $fill.length; i++){
-    $fill[i].toggleClass('started')
-  }
-  $mask.toggleClass('started')
+function startup($fill, $mask, $loader) {
+  setTimeout(function() {
+    $loader.toggleClass('started');
+    for(var i = 0; i < $fill.length; i++){
+      $fill[i].toggleClass('started')
+    }
+    $mask.toggleClass('started')
+  }, 1000)
+  setTimeout(function() {
+    $loader.toggleClass('finishedStarting');
+  }, 2000)
 }
 
 function seeGetStarted($filler, $masking) {
