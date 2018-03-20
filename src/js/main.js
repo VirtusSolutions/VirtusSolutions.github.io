@@ -10,6 +10,7 @@ $(document).ready(function(){
   $link = $('.link a');
   $start = $('#start');
   $loader = $('#loader');
+  $path = nthOfType('path', 4);
 
 
   if (window.innerWidth > 800) {
@@ -19,9 +20,6 @@ $(document).ready(function(){
   }
 
   startup($fill, $mask, $loader)
-
-  // TODO: Start this at scroll down
-  // seeGetStarted($filler, $masking)
 
   $menuBtn.on('click', function() {
     openNav($nav)
